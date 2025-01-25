@@ -3,20 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ABC Corporation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: auto;
+            border: 1px solid black;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        h1, h2 {
+            margin: 0;
+            padding: 10px;
+        }
+
+        .form-group {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-group label {
+            flex: 1;
+            text-align: left;
+        }
+
+        .form-group input {
+            flex: 2;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            background-color: #467fcf;
+            color: white;
+            border: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button-group button:hover {
+            background-color: #365d9d;
+        }
+    </style>
 </head>
 <body>
-    <p id="para" >pragraph</p>
-    <form action="">
-     <label for="">description</label>
-     <input type="text" name="" id="description">
-     <input type="text" name="" id="click">
-    <button id="button">click</button>
-    </form>
-    
+    <div class="container">
+        <h1>ABC CORPORATION</h1>
+        <h2>Employees Data</h2>
 
+        <div class="form-group">
+            <label for="empNo">Emp No</label>
+            <input type="text" id="empNo" placeholder="Enter Employee Number">
+        </div>
 
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter Name">
+        </div>
 
-    <script src="app.js"></script>
+        <div class="form-group">
+            <label for="grade">Grade</label>
+            <input type="text" id="grade" placeholder="Enter Grade">
+        </div>
+
+        <div class="form-group">
+            <label for="designation">Designation</label>
+            <input type="text" id="designation" placeholder="Enter Designation">
+        </div>
+
+        <div class="form-group">
+            <label for="salary">Salary</label>
+            <input type="text" id="salary" placeholder="Enter Salary">
+        </div>
+
+        <div class="form-group">
+            <label for="mobNo">Mob No</label>
+            <input type="text" id="mobNo" placeholder="Enter Mobile Number">
+        </div>
+
+        <div class="button-group">
+            <button onclick="submitForm()">Submit</button>
+            <button onclick="updateForm()">Update</button>
+            <button onclick="goHome()">Home</button>
+        </div>
+    </div>
+
+    <script>
+        function submitForm() {
+            const empNo = document.getElementById('empNo').value;
+            const name = document.getElementById('name').value;
+            const grade = document.getElementById('grade').value;
+            const designation = document.getElementById('designation').value;
+            const salary = document.getElementById('salary').value;
+            const mobNo = document.getElementById('mobNo').value;
+
+            alert(`Form Submitted:\nEmp No: ${empNo}\nName: ${name}\nGrade: ${grade}\nDesignation: ${designation}\nSalary: ${salary}\nMob No: ${mobNo}`);
+        }
+
+        function updateForm() {
+            alert("Form Updated");
+        }
+
+        function goHome() {
+            alert("Going Home");
+        }
+    </script>
 </body>
 </html>
